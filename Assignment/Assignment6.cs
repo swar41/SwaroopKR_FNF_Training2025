@@ -1,57 +1,83 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SampleConsoleApp1.Assignment
+namespace Assignment
 {
     internal class Assignment6
     {
-        public static bool chk(int year, int month, int day)
-        {
-            //if (month < 1 || month > 12)
-            //    return false;
-
-            //int[] daysInMonth = { 31, (DateTime.IsLeapYear(year) ? 29 : 28), 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
-
-            //if (day < 1 || day > daysInMonth[month - 1])
-            //    return false;
-            //---------------------------------------------------
-
-            if (day < 1 || day > DateTime.DaysInMonth(year, month))
-                return false;
-
-            //=-=======-------------------------------------------
-            return true;
-        }
-        public static (int y,int m,int d) takeInput()
-        {
-            int year = ConsoleUtil.GetInputInt("ENter year");
-            int month = ConsoleUtil.GetInputInt("ENter month");
-            int day = ConsoleUtil.GetInputInt("ENter day");
-            return (year, month, day);
-        }
         static void Main(string[] args)
         {
-            bool f = true;
             do
             {
-                var (year, month, day) = takeInput();
-                bool res = chk(year, month, day);
-                if (res){
-                    Console.WriteLine("Valid");
-                }else{
-                    Console.WriteLine("Invalid");
-                }
-                Console.WriteLine("y for retry ,, n for exit");
-                String c = Console.ReadLine().ToLower();
-                if (c == "n") 
-                {
-                    f = false;
-                }
-            } while (f);
+                bool valid = false;
+                int year = GetIntinput("Enter the Year: ");
+                int month = GetIntinput("Enter the Month: ");
+                int day = GetIntinput("Enter the Day: ");
+                valid = IsValidDate(year, month, day);
+                Console.WriteLine(valid); 
+            } while (true);
         }
+
+        private static bool IsValidDate(int year, int month, int day)
+        {
+            if((day <1 || day > 31) || (month<1 || month>12 ))
+            {
+                return false;
+            }
+            // leap year 
+            else if (year % 400 ==0 || year % 4 ==0)
+            {
+                // leap year 2cd month have 29 days
+                if(month == 2)
+                {
+                    if(day>29) return false;
+                    else return true;
+                }
+                // months with 31 days
+                else if ((month == 1) || (month == 3) || (month == 5) || (month == 7) || (month == 8) || (month == 10) || (month == 12))
+                {
+                    if (day < 32) return true;
+                    else return false;
+                }
+                // months with 30 days
+                else
+                {
+                    if (day > 30) return false;
+                    else return true;
+                }
+            }
+            // not leap year but to handle months with 31 days
+            else if((month ==1) ||  (month == 3) || (month == 5) || (month == 7) || (month == 8)  || (month == 10) ||  (month == 12) ) {
+                if (day < 32) return true;
+                else return false;
+            }
+            
+            // not a leap year 
+            else if(month == 2)
+            {
+                if(day > 28) return false; 
+                else return true;
+            }
+            // months with 30 days
+            else
+            {
+                if (day > 30) return false;
+                else return true;
+            }
+            
+        }
+
+        private static int GetIntinput(string v)
+        {
+            Console.WriteLine(v);
+            string input = Console.ReadLine();
+            return int.Parse(input);
+        }
+
+        
     }
 }
