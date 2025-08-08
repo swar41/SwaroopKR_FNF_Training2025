@@ -1,0 +1,8 @@
+======================CUSTOMER MANAGMENT SYSTEM=========================
+PRESS 1 TO ADD CUSTOMER
+PRESS 2 TO REMOVE CUSTOMER
+PRESS 3 TO UPDATE CUSTOMER
+PRESS 4 TO SEARCH CUSTOMER
+PRESS 5 TO DISPLAY ALL THE CUSTOMERS
+PRESS ANT OTHER KEY TO EXIT THE APP
+========================================================================
