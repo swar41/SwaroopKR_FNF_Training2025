@@ -1,5 +1,3 @@
-/* styl.css */
-
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -57,3 +55,4 @@ button:hover {
     color: #444;
     word-wrap: break-word;
 }
+
