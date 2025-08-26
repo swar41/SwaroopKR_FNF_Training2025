@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Validation Form</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body style="justify-content: center;">
+  <h2>Validation Form</h2>
+  <form id="myForm">
+    <label>Username (6-8 alphanumeric):</label><br>
+    <input type="text" id="username"><br><br>
+
+    <label>PIN:</label><br>
+    <input type="text" id="pin"><br><br>
+
+    <label>State:</label><br>
+    <select id="state">
+      <option value="">--Select State--</option>
+      <option value="Karnataka">Karnataka</option>
+      <option value="Tamil Nadu">Tamil Nadu</option>
+      <option value="Kerala">Kerala</option>
+    </select><br><br>
+
+    <input type="checkbox" id="validatePin">
+    <label for="validatePin">Validate PIN</label><br>
+
+    <input type="checkbox" id="testMe">
+    <label for="testMe">Test Me</label><br><br>
+
+    <label>Select one:</label><br>
+    <input type="radio" name="product" value="Milk"> Milk<br>
+    <input type="radio" name="product" value="Butter"> Butter<br>
+    <input type="radio" name="product" value="Cheese"> Cheese<br><br>
+
+    <input type="submit" value="Submit">
+  </form>
+
+  <script src="script.js"></script>
+</body>
+</html>
