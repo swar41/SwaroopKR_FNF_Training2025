@@ -16,7 +16,7 @@ select * from employee_manager_table
 go
 
 select
-e.name as name, m.name as name
+e.name as employee_name, m.name as manager_name
 from employee_manager_table e
 left join 
 employee_manager_table m on e.manager_id = m.emp_id
