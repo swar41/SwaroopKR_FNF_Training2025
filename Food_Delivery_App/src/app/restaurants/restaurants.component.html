@@ -1,0 +1,25 @@
+<div class="container mt-5">
+  <h2 class="mb-4 text-success">Restaurants</h2>
+
+  <div class="row">
+    <div
+      class="col-md-6 col-lg-4 mb-4"
+      *ngFor="let r of restaurants"
+    >
+      <div class="card h-100 shadow-sm" (click)="openMenu(r.id)" style="cursor: pointer;">
+        <img
+          src="{{ r.imageUrl || 'https://via.placeholder.com/400x200?text=Restaurant+Image' }}"
+          class="card-img-top"
+          alt="{{ r.name }}"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ r.name }}</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center mt-4">
+    <button class="btn btn-primary" routerLink="/cart">Go to Cart</button>
+  </div>
+</div>

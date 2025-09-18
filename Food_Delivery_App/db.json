@@ -1,0 +1,58 @@
+{
+  "restaurants": [
+    {
+      "id": 1,
+      "name": "Spicy Treat",
+      "imageUrl": "https://thvnext.bing.com/th/id/OSK.73e54a958cf6db4421bd41988452210b?w=194&h=145&rs=2&qlt=80&o=6&cdv=1&cb=thwsc4&dpr=1.3&pid=16.1",
+      "menu": [
+        { "id": 1, "name": "Paneer Butter Masala", "price": 200 },
+        { "id": 2, "name": "Chicken Curry", "price": 250 }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Tandoori Hub",
+      "imageUrl": "https://thvnext.bing.com/th/id/OSK.261d83af68678d2331e1b4cb762f40e3?w=194&h=129&rs=2&qlt=80&o=6&cdv=1&cb=thwsc4&dpr=1.3&pid=16.1",
+      "menu": [
+        { "id": 1, "name": "Tandoori Roti", "price": 40 },
+        { "id": 2, "name": "Dal Tadka", "price": 150 }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Pizza World",
+      "imageUrl": "https://thvnext.bing.com/th/id/OIP.8UeIFPMYwIErE1ShRYB9QAHaEo?w=297&h=185&c=7&r=0&o=7&cb=ucfimgc2&dpr=1.3&pid=1.7&rm=3",
+      "menu": [
+        { "id": 1, "name": "Veggie Pizza", "price": 300 },
+        { "id": 2, "name": "Pepperoni Pizza", "price": 400 }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Burger Palace",
+      "imageUrl": "https://thvnext.bing.com/th/id/OIP.Oj9ppaRfiy0FICs7w-pTtQHaHa?w=174&h=180&c=7&r=0&o=7&cb=ucfimgc2&dpr=1.3&pid=1.7&rm=3",
+      "menu": [
+        { "id": 1, "name": "Cheese Burger", "price": 180 },
+        { "id": 2, "name": "Veg Burger", "price": 150 }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "South Spice",
+      "imageUrl": "https://thvnext.bing.com/th/id/OIP.hs3pe6ChOg5LZ-t2-8WCvQHaLG?w=118&h=180&c=7&r=0&o=7&cb=ucfimgc2&dpr=1.3&pid=1.7&rm=3",
+      "menu": [
+        { "id": 1, "name": "Masala Dosa", "price": 100 },
+        { "id": 2, "name": "Idli Vada", "price": 80 }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Asian Delight",
+      "imageUrl": "https://thvnext.bing.com/th/id/OIP.Ow8ygpNwKscCKKKSVAotngHaHa?w=176&h=180&c=7&r=0&o=7&cb=ucfimgc2&dpr=1.3&pid=1.7&rm=3",
+      "menu": [
+        { "id": 1, "name": "Sushi Roll", "price": 350 },
+        { "id": 2, "name": "Thai Green Curry", "price": 300 }
+      ]
+    }
+  ]
+}
